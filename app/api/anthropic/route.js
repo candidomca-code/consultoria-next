@@ -1,3 +1,5 @@
+export const runtime = 'edge';
+
 export async function POST(request) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
@@ -17,6 +19,6 @@ export async function POST(request) {
     const data = await response.json();
     return Response.json(data, { status: response.status });
   } catch (e) {
-    return Response.json({ error: "Falha na Anthropic.", detail: e.message }, { status: 500 });
+    return Response.json({ error: e.message }, { status: 500 });
   }
 }

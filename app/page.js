@@ -3,8 +3,7 @@ import { useState } from "react";
 
 const P = "#7F77DD";
 const ADMIN_WHATSAPP = "5551989640834";
-const APP_VERSION = "2.1.0-DIRECT";
-const ANTHROPIC_KEY = "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";
+const APP_VERSION = "3.0.0-EDGE";
 
 const QUESTIONS = [
   { id: "estado_civil", sec: "👤 Perfil", q: "Qual o seu estado civil?", opts: ["Solteiro(a)", "Casado(a)", "União estável", "Divorciado(a)", "Viúvo(a)", "Outro"] },
@@ -47,14 +46,9 @@ function buildResumo(answers) {
 
 async function callIA(resumo, nome) {
   try {
-    const res = await fetch("https://api.anthropic.com/v1/messages", {
+    const res = await fetch("/api/anthropic", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-api-key": ANTHROPIC_KEY,
-        "anthropic-version": "2023-06-01",
-        "anthropic-dangerous-direct-browser-access": "true"
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
         model: "claude-sonnet-4-20250514",
         max_tokens: 1500,
