@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const P = "#7F77DD";
 const ADMIN_WHATSAPP = "5551989640834";
-const APP_VERSION = "3.0.2-EDGE";
+const APP_VERSION = "3.0.3-EDGE";
 
 const QUESTIONS = [
   { id: "estado_civil", sec: "👤 Perfil", q: "Qual o seu estado civil?", opts: ["Solteiro(a)", "Casado(a)", "União estável", "Divorciado(a)", "Viúvo(a)", "Outro"] },
