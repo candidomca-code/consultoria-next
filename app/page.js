@@ -4,7 +4,7 @@ import { useState } from "react";
 const P = "#7F77DD";
 const ADMIN_WHATSAPP = "5551989640834";
 const APP_VERSION = "2.1.0-DIRECT";
-const ANTHROPIC_KEY = "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";
+const ANTHROPIC_KEY = "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";
 
 const QUESTIONS = [
   { id: "estado_civil", sec: "👤 Perfil", q: "Qual o seu estado civil?", opts: ["Solteiro(a)", "Casado(a)", "União estável", "Divorciado(a)", "Viúvo(a)", "Outro"] },
